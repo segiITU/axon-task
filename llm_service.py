@@ -1,9 +1,8 @@
 from openai import OpenAI
-import os
 
 class LLMService:
-    def __init__(self):
-        self.client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
+    def __init__(self, api_key):
+        self.client = OpenAI(api_key=api_key)
 
     def process_question(self, question, weather_data):
         """Generate a response using OpenAI's API."""

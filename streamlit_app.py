@@ -2,20 +2,18 @@ import streamlit as st
 from weather_api import WeatherService
 from llm_service import LLMService
 from datetime import datetime
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 def main():
     st.title("Copenhagen Weather Assistant")
     
-    # Default location (Copenhagen)
+    # Default location set to Copenhagen
     lat = 55.6761
     lon = 12.5683
     
+    api_key = st.secrets["OPENAI_API_KEY"]
+    
     weather_service = WeatherService()
-    llm_service = LLMService()
+    llm_service = LLMService(api_key)
     
     question = st.text_input("What's your weather question?")
     
