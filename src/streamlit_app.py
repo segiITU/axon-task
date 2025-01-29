@@ -1,6 +1,6 @@
 import streamlit as st
-from weather_api import WeatherService
-from llm_service import LLMService
+from src.weather_api import WeatherService
+from src.llm_service import LLMService
 from datetime import datetime
 import os
 from dotenv import load_dotenv
