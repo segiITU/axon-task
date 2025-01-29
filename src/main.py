@@ -1,5 +1,5 @@
-from weather_api import WeatherService
-from llm_service import LLMService
+from .weather_api import WeatherService
+from .llm_service import LLMService
 from datetime import datetime
 import os
 
